@@ -49,7 +49,7 @@ export const ContainerFooter = styled.div`
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
   }
   .newsletter input {
     background: transparent;

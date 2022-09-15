@@ -108,7 +108,8 @@ export const Menu = styled.div`
   }
 
   > *:hover {
-    color: #df2020;
+    color: blue;
+    transform: scale(1.1)
   }
 `;
 

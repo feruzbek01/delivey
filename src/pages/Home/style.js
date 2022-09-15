@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerHome = styled.div`
+  color: ${({ isActive }) => (isActive === "dsa" ? "" : "")};
   .hero__content {
     padding-top: 70px;
   }
@@ -68,11 +69,108 @@ export const ContainerHome = styled.div`
   .feature_item {
     background: #fde4e4;
     border-radius: 20px;
-    transition:0.3s;
+    transition: 0.3s;
     box-shadow: 5px 5px 10px #888;
   }
 
-  .feature_item:hover{
-    transform:translateY(-15px) ;
+  .feature_item:hover {
+    transform: translateY(-15px);
+  }
+
+  .food__category {
+    background: #df2020;
+    padding: 7px 0px;
+    border-radius: 8px;
+
+    /* button:hover {
+      color: #212245;
+      transform: scale(1.1);
+    } */
+
+    > :nth-child(1) {
+      background-color: #212245;
+      color: #fff;
+      border-radius: 10px;
+    }
+    > :nth-child(1):active {
+      background-color: #212245;
+      color: #fff;
+    }
+  }
+
+  .food__category button {
+    border: none;
+    outline: none;
+    padding: 7px 20px;
+    color: #fff;
+    background: transparent;
+
+    font-family: "RocknRoll One", sans-serif;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .clicked {
+    background: #fff !important;
+    color: #212245 !important;
+    font-family: "RocknRoll One", sans-serif;
+    border-radius: 10px;
+  }
+`;
+
+export const Button = styled.button`
+  :hover {
+    transform: ${({ className }) =>
+      className === "clicked" ? "" : "scale(1.1)"} !important ;
+  }
+`;
+
+export const WhyTasty = styled.div`
+  .tasty__treat-title span {
+    color: #df2020;
+  }
+
+  .tasty__treat-desc {
+    color: #777;
+  }
+
+  .choose_us-title {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .choose_us-title i {
+    font-weight: 500 !important;
+    color: #df2020;
+  }
+
+  .choose_us-desc {
+    color: #777;
+  }
+`;
+
+export const TestimonialSection = styled.div`
+  padding: 60px 0;
+
+  .testimonial_subtitle {
+    color: #df2020;
+  }
+
+  .testimonial_title span {
+    color: #df2020;
+  }
+
+  .testimonial_desc{
+    line-height:30px;
+    color:#777;
   }
 `;
