@@ -91,15 +91,20 @@ export const Logo = styled.div`
     font-size: 1rem;
     color: #212245;
   }
-`;
+  `;
 
 export const Navigation = styled.div``;
 
+export const activeStyle = ({ isActive }) => {
+  return {
+    color: isActive ? "blue" : "" , 
+  };
+};
 export const Menu = styled.div`
   display: flex;
   gap: 50px;
 
-  > * {
+  * {
     color: black;
     font-size: 17;
     font-weight: 600;
@@ -107,17 +112,12 @@ export const Menu = styled.div`
     text-decoration: none;
   }
 
-  > *:hover {
-    color: blue;
-    transform: scale(1.1)
+  *:hover {
+    color: blue !important;
+    /* transform: scale(1.04) */
   }
 `;
 
-export const activeStyle = ({ isActive }) => {
-  return {
-    color: isActive ? "blue" : "",
-  };
-};
 
 export const NavRight = styled.div`
   display: flex;

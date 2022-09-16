@@ -21,6 +21,9 @@ import products from "../../assets/fake-data/products.js";
 
 import { Product } from "../../components/UI/ProductCard";
 
+import Slider from "react-slick";
+import { TestimonialSlider } from "../../components/UI/TestimonialSlider";
+
 const featureData = [
   {
     title: "Quick Delivery",
@@ -70,6 +73,14 @@ export const Home = () => {
       setAlProducts(filtered);
     }
   }, [category]);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
   return (
     <ContainerHome>
@@ -294,7 +305,7 @@ export const Home = () => {
       <TestimonialSection>
         <Container>
           <Row>
-            <Col lg="6" md="6" >
+            <Col lg="6" md="6">
               <div className="testimonial mt-5 ">
                 <h5 className="testimonial_subtitle mb-4 ">Testimonial</h5>
                 <h2 className="testimonial_title mb-4 ">
@@ -306,6 +317,7 @@ export const Home = () => {
                   dolores hic nostrum voluptate! Natus commodi ipsum aspernatur
                   hic fuga. Quibusdam!
                 </p>
+                <TestimonialSlider/>
               </div>
             </Col>
             <Col lg="6" md="6">
@@ -314,7 +326,9 @@ export const Home = () => {
           </Row>
         </Container>
       </TestimonialSection>
-      {/* </Helmet> */}
+
+      
+
     </ContainerHome>
   );
 };

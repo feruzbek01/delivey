@@ -42,11 +42,10 @@ export const Header = () => {
               {nav__links.map((item, index) => {
                 return (
                   <NavLink
-                    className='hi'
+                  style={activeStyle }
                     onClick={toggleMenu}
                     to={item.path}
                     key={index}
-                    style={activeStyle}
                     // className={(navClass) => navClass.isActive ? 'red': ''}
                   >
                     {item.display}
