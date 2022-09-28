@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const ContainerHeader = styled.div`
   width: 100%;
-  height: 70px;
+  height: 80px;
 
   .header_shrink {
     position: sticky;
     top: 0;
     left: 0;
+    z-index:9999;
     box-shadow: 5px 5px 15px -5px #fde4e4;
   }
 
