@@ -8,7 +8,7 @@ export const CartItem = ({ item, index }) => {
   const dispatch = useDispatch()
   // const cartItems = useSelector((state) => state.cart.cartItems);
   const deleteItemHandle = () => {
-    dispatch(cartActions.deleteItem(item.id));
+    dispatch(cartActions.deleteItem(item));
   };
 
   const increase = () => {
