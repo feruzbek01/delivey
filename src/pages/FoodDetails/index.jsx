@@ -71,7 +71,7 @@ export const FoodDetails = () => {
       <section style={{ paddingTop: "40px" }}>
         <Container>
           <Row>
-            <Col md="2" lg="2">
+            <Col md="2" lg="2" sm="12" xs="12">
               <div className="product__images">
                 <div
                   className="img_item"
@@ -95,25 +95,27 @@ export const FoodDetails = () => {
             </Col>
             <Col md="4" lg="4">
               <div className="product__main-image">
-                <img src={productImg} alt="" className={"w-100"} />
+                <img src={productImg} alt="" className="w-75" />
               </div>
             </Col>
             <Col md="6" lg="6">
-              <div className="single__product-content">
-                <h2 className="product__title">{title}</h2>
-                <p className="product__price">
-                  {" "}
-                  Price:
-                  <span>${price}</span>
-                </p>
-                <p className="category">
-                  {" "}
-                  Category: <span>{category}</span>{" "}
-                </p>
+              <div className="hit">
+                <div className="single__product-content ">
+                  <h2 className="product__title">{title}</h2>
+                  <p className="product__price">
+                    {" "}
+                    Price:
+                    <span>${price}</span>
+                  </p>
+                  <p className="category">
+                    {" "}
+                    Category: <span>{category}</span>{" "}
+                  </p>
 
-                <button className="addTOCart__btn" onClick={handleAddItem}>
-                  Add to Cart
-                </button>
+                  <button className="addTOCart__btn" onClick={handleAddItem}>
+                    Add to Cart
+                  </button>
+                </div>
               </div>
             </Col>
 
@@ -138,29 +140,14 @@ export const FoodDetails = () => {
                   <p>{desc}</p>
                 </div>
               ) : (
-                <div className="tab__form mb-5 pt-5">
+                <div className="tab__form mb-5 pt-2">
                   {reviewsStore.map((value) => (
-                    <div  className="review">
+                    <div className="review mb-3">
                       <p className="user__name mb-0">{value.name}</p>
                       <p className="user__email mb-0">{value.email}</p>
                       <p className="feedback__text mb-0">{value.review}</p>
                     </div>
                   ))}
-
-                  {/* <div className="review">
-                    <p className="user__name mb-0">Muhammadamin</p>
-                    <p className="user__email mb-0">
-                      muhammad.alforuq@gmail.com
-                    </p>
-                    <p className="feedback__text mb-0">Great Product</p>
-                  </div>
-                  <div className="review">
-                    <p className="user__name mb-0">Muhammadamin</p>
-                    <p className="user__email mb-0">
-                      muhammad.alforuq@gmail.com
-                    </p>
-                    <p className="feedback__text mb-0">Great Product</p> */}
-                  {/* </div> */}
 
                   <form onSubmit={addReviewHandler} className="form">
                     <div className="form__group">
@@ -188,10 +175,7 @@ export const FoodDetails = () => {
                       />
                     </div>
 
-                    <button
-                      type="submit"
-                      className="addTOCart__btn "
-                    >
+                    <button type="submit" className="addTOCart__btn ">
                       Submit
                     </button>
                   </form>

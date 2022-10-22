@@ -8,7 +8,6 @@ import {
   Navigation,
   NavRight,
   NavWrapper,
-  styleHeader,
 } from "./style";
 import { NavLink, Link } from "react-router-dom";
 import { Container } from "reactstrap";
@@ -70,7 +69,7 @@ export const Header = () => {
         <NavWrapper className="nav-wrapper">
           <Logo className="logo">
             <img src={logo} alt="logo" />
-            <h5>Tasty Treat</h5>
+            <h5 >Tasty Treat</h5>
           </Logo>
 
           {/* ===== Menu ===== */}
@@ -108,6 +107,7 @@ export const Header = () => {
             </span>
           </NavRight>
         </NavWrapper>
+        
       </Container>
     </ContainerHeader>
   );

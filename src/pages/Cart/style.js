@@ -12,9 +12,8 @@ export const ContainerCart = styled.div`
 
   td {
     font-size: 19px;
+    font-weight: 500px;
     font-weight: 500;
-
-    line-height: 60px;
   }
 
   .cart__img-box {
@@ -30,26 +29,26 @@ export const ContainerCart = styled.div`
     cursor: pointer;
   }
 
-    .addTOCart__btn {
-      border: none;
-      padding: 7px 15px;
-      background: #df2020;
-      color: #fff;
-      border-radius: 5px;
-      transition: 0.3s ease;
-      font-family: "RocknRoll One", sans-serif !important;
+  .addTOCart__btn {
+    border: none;
+    padding: 7px 15px;
+    background: #df2020;
+    color: #fff;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    font-family: "RocknRoll One", sans-serif !important;
 
-      a {
-        color: unset;
-      }
+    a {
+      color: unset;
     }
+  }
 
-    .addTOCart__btn:hover {
-      transform: scale(1.1);
-    }
-    .addTOCart__btn:active {
-      transform: scale(0.95);
-    }
+  .addTOCart__btn:hover {
+    transform: scale(1.1);
+  }
+  .addTOCart__btn:active {
+    transform: scale(0.95);
+  }
 
   .cart__subTotal {
     p {
@@ -66,6 +65,47 @@ export const ContainerCart = styled.div`
     th,
     td {
       font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cart__page-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+
+
+
+  @media (max-width: 380px) {
+    .PriceWithQuantity {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        border: none;
+        border-top: 1px solid black;
+      }
+    }
+
+    .quantity {
+      border:none;
+      display: none;
+    }
+  }
+
+  @media (min-width: 381px) {
+    .PriceWithQuantity {
+      span {
+        display: none;
+      }
     }
   }
 `;

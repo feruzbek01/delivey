@@ -1,10 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
 
-import ava1 from '../../../assets/images/ava-3.jpg'
+import ava1 from "../../../assets/images/ava-3.jpg";
 import { ConTeSlider } from "./style";
 
-export const TestimonialSlider = () => {
+export const TestimonialSlider = ({className}) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -16,7 +16,7 @@ export const TestimonialSlider = () => {
     slidesToScroll: 1,
   };
   return (
-    <ConTeSlider>
+    <ConTeSlider className={className} >
       <Slider {...settings}>
         <div>
           <p className="review_text">

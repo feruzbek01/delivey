@@ -33,8 +33,10 @@ export const Cart = () => {
                     <tr>
                       <th>Image</th>
                       <th>Product</th>
-                      <th>Price</th>
-                      <th>Quantity</th>
+                      <th className="PriceWithQuantity">
+                        Price <span>Qty</span>{" "}
+                      </th>
+                      <th className="quantity">Quantity</th>
                       <th>Delete</th>
                     </tr>
                   </thead>
@@ -49,18 +51,22 @@ export const Cart = () => {
                 </table>
               )}
 
-              <div className="cart__subTotal mt-5 " >
+              <div className="cart__subTotal mt-5 ">
                 <h5>
                   Subtotal: <span>${totalAmount}</span>{" "}
                 </h5>
                 <p>Taxes and shipping will calculate at checkout</p>
                 <div className="cart__page-btn  ">
-                  <button className="addTOCart__btn me-4 ">
-                    <Link to={"/foods"}> Continue Shopping</Link>
-                  </button>
-                  <button className="addTOCart__btn">
-                    <Link to={"/checkout"}>Proceed to Checkout</Link>
-                  </button>
+                  <Link to={"/foods"}>
+                    <button className="addTOCart__btn me-4 ">
+                      Continue Shopping
+                    </button>
+                  </Link>
+                  <Link to={"/checkout"}>
+                    <button className="addTOCart__btn">
+                      Proceed to Checkout
+                    </button>
+                  </Link>
                 </div>
               </div>
             </Col>
@@ -78,8 +84,10 @@ const Tr = ({ item, onDelete }) => {
         <img src={item.image01} alt="" />
       </td>
       <td>{item.title}</td>
-      <td>${item.price}</td>
-      <td>{item.quantity}x</td>
+      <td className="PriceWithQuantity" >
+        ${item.price} <span>{item.quantity}x</span>{" "}
+      </td>
+      <td className="quantity">{item.quantity}x</td>
       <td>
         <i onClick={() => onDelete(item)} class="ri-delete-bin-line"></i>
       </td>

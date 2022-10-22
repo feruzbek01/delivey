@@ -46,6 +46,8 @@ export const AllFoodContainer = styled.div`
     font-size: 0.8rem;
   }
 
+  
+
   @media only screen and (max-width: 768px) {
     .search_widget {
       width: 100%;

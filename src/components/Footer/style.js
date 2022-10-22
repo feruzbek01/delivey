@@ -46,12 +46,15 @@ export const ContainerFooter = styled.div`
     border: 1px solid #212245;
     border-radius: 5px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     cursor: pointer;
     /* box-sizing: border-box; */
   }
+
+
   .newsletter input {
+    width: 70%;
     background: transparent;
     border: none;
     outline: none;

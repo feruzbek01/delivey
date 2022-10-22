@@ -91,9 +91,8 @@ export const AllFoods = () => {
                 </Col>
               );
             })}
-            <div style={{ display: "flex", justifyContent: "center" }}>
+            <div className="pagination">
               <ReactPaginate
-                // activeLinkClassName={true}
                 pageCount={pageCount}
                 onPageChange={changePage}
                 previousLabel={"Prev"}

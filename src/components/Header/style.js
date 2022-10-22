@@ -4,8 +4,8 @@ export const ContainerHeader = styled.div`
   width: 100%;
   height: 80px;
 
-  /* ====== media 768 */
-  @media (max-width: 768px) {
+  /* ====== media 767 */
+  @media (max-width: 767px) {
     width: 100%;
     height: fit-content;
     line-height: 50px;
@@ -14,17 +14,25 @@ export const ContainerHeader = styled.div`
       display: flex;
       align-items: center;
       gap: 5px;
+
+      img {
+        width: calc(100% - 70%) !important ;
+      }
+
+      h5 {
+        font-size: 0.8rem;
+      }
     }
   }
 
-  /*========= media 992====== */
-  @media (max-width: 992px) {
+  /*========= media 991====== */
+  @media (max-width: 991px) {
     .logo img {
-      width: calc(100% - 70%);
+      width: calc(100% - 60%);
     }
 
     .logo h5 {
-      font-size: 0.8rem;
+      font-size: 1rem;
     }
 
     .navigation {
@@ -36,11 +44,11 @@ export const ContainerHeader = styled.div`
       background: rgba(0, 0, 0, 0.425);
       z-index: 99;
 
-       display: none;
+      display: none;
     }
 
     .show_menu {
-     display: block;
+      display: block;
     }
 
     .menu {
@@ -77,6 +85,7 @@ export const NavWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 `;
 
 export const Logo = styled.div`
@@ -121,6 +130,9 @@ export const Menu = styled.div`
 export const NavRight = styled.div`
   display: flex;
   gap: 30px;
+  @media (max-width: 320px) {
+    gap: 10px;
+  }
 
   > :nth-child(3) {
     display: none;

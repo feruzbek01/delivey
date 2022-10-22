@@ -4,7 +4,6 @@ import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 
 import { ContainerHome, Button, WhyTasty, TestimonialSection } from "./style";
 import { Category } from "../../components/UI/Category";
-import { Helmet } from "../../components/Helmet/index";
 
 import heroImg from "../../assets/images/hero.png";
 import whyImg from "../../assets/images/location.png";
@@ -21,7 +20,6 @@ import products from "../../assets/fake-data/products.js";
 
 import { Product } from "../../components/UI/ProductCard";
 
-import Slider from "react-slick";
 import { TestimonialSlider } from "../../components/UI/TestimonialSlider";
 
 const featureData = [
@@ -74,21 +72,13 @@ export const Home = () => {
     }
   }, [category]);
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
-
   return (
     <ContainerHome>
       {/* <Helmet title="Home"> */}
       <section>
         <Container>
           <Row>
-            <Col lg="6" md="6">
+            <Col lg="6" md="6" sm="12" xs="12">
               <div className="hero__content  ">
                 <h5 className="mb-3">Easy way to make an order</h5>
                 <h1 className="mb-4 hero__title">
@@ -101,7 +91,7 @@ export const Home = () => {
                   magni delectus tenetur autem, sint veritatis!
                 </p>
 
-                <div className="hero__btns d-flex align-items-center gap-5 mt-4">
+                <div className="hero__btns d-flex align-items-center  gap-5 mt-4">
                   <button className="order__btn d-flex align-items-center justify-content-between">
                     Order now <i class="ri-arrow-right-s-line"></i>
                   </button>
@@ -136,6 +126,7 @@ export const Home = () => {
           </Row>
         </Container>
       </section>
+
       <section>
         <Category />
       </section>
@@ -159,7 +150,6 @@ export const Home = () => {
               </p>
             </Col>
 
-            {/* <Row> */}
             {featureData.map((item, index) => {
               return (
                 <Col lg="4" className="mt-5" key={index}>
@@ -175,7 +165,6 @@ export const Home = () => {
                 </Col>
               );
             })}
-            {/* </Row> */}
           </Row>
         </Container>
       </section>
@@ -183,12 +172,12 @@ export const Home = () => {
       <section>
         <Container>
           <Row>
-            <Col lg="12" className="text-center">
+            <Col lg="12" md="12" sm="12" xs="12" className="text-center">
               <h2>Popular Foods</h2>
             </Col>
 
-            <Col lg="12" className="mt-5 mb-4 ">
-              <div className="food__category d-flex align-items-center justify-content-center gap-4">
+            <Col lg="12" md="12" sm="12" xs="12" className="mt-5 mb-4 m-auto">
+              <div className="food__category d-flex align-items-center justify-content-center gap-4 ">
                 <Button
                   className={`${category === "All" ? "clicked" : ""}`}
                   onClick={() => setCategory("All")}
@@ -220,7 +209,14 @@ export const Home = () => {
             </Col>
             {allProducts.map((item, index) => {
               return (
-                <Col lg="3" md="4" key={item.id} className="mt-3">
+                <Col
+                  lg="3"
+                  md="4"
+                  sm="6"
+                  xs="12"
+                  key={item.id}
+                  className="mt-3"
+                >
                   <Product item={item} />
                 </Col>
               );
@@ -238,7 +234,7 @@ export const Home = () => {
             <Col lg="6" md="6">
               <WhyTasty>
                 <h2 className="tasty__treat-title">
-                  Why <span>Tast Treat?</span>
+                  Why <span>Tasty Treat?</span>
                 </h2>
                 <p className="tasty__treat-desc">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi
@@ -258,7 +254,7 @@ export const Home = () => {
                     </p>
                   </ListGroupItem>
                   <ListGroupItem className="border-0 ps-0">
-                    <p className=" choose_us-title d-flex gap-2">
+                    <p className="choose_us-title d-flex gap-2">
                       <i class="ri-checkbox-circle-line"></i>
                       Quality support
                     </p>
@@ -284,16 +280,23 @@ export const Home = () => {
         </Container>
       </section>
 
-      <section className="pt-0">
+      <section className="pt-0 pb-0"  >
         <Container>
           <Row>
-            <Col lg="12" md="6" className="text-center">
+            <Col lg="12" md="12" sm="12" xs="12" className="text-center">
               <h2>Hot Pizza</h2>
             </Col>
 
-            {hotPizza.map((item, index) => {
+            {hotPizza.map((item) => {
               return (
-                <Col lg="3" md="4" key={item.id} className="mt-4">
+                <Col
+                  lg="3"
+                  md="4"
+                  sm="6"
+                  xs="12"
+                  key={item.id}
+                  className="mt-4"
+                >
                   <Product item={item} />
                 </Col>
               );
@@ -317,7 +320,7 @@ export const Home = () => {
                   dolores hic nostrum voluptate! Natus commodi ipsum aspernatur
                   hic fuga. Quibusdam!
                 </p>
-                <TestimonialSlider/>
+                <TestimonialSlider className="testimonialSlider" />
               </div>
             </Col>
             <Col lg="6" md="6">
@@ -326,9 +329,6 @@ export const Home = () => {
           </Row>
         </Container>
       </TestimonialSection>
-
-      
-
     </ContainerHome>
   );
 };

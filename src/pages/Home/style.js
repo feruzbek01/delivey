@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerHome = styled.div`
   .hero__content {
-    padding-top: 70px;
+    /* padding-top: 70px; */
   }
 
   .hero__title {
@@ -95,6 +95,9 @@ export const ContainerHome = styled.div`
       background-color: #212245;
       color: #fff;
     }
+    section {
+      padding-top: 0px;
+    }
   }
 
   .food__category button {
@@ -122,6 +125,57 @@ export const ContainerHome = styled.div`
     color: #212245 !important;
     font-family: "RocknRoll One", sans-serif;
     border-radius: 10px;
+  }
+
+  /* ========= Media max-480px =========== */
+
+  @media (max-width: 480px) {
+    .hero__content {
+      padding-top: 20px;
+      text-align: center;
+    }
+
+    section {
+      padding-top: 0px;
+    }
+
+    .hero__title {
+      font-size: 25px;
+    }
+
+    .hero__btns,
+    .hero__service {
+      display: flex;
+      justify-content: center;
+    }
+
+    .category__item {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .food__category {
+      display: flex;
+      gap: 0px !important;
+      flex-wrap: wrap;
+    }
+
+    .testimonialSlider {
+      display: none;
+    }
+  }
+
+  /* =========================== Media max-768px ====================== */
+
+  @media (max-width: 768px) {
+    .food__category {
+      display: flex;
+      gap: 0px !important;
+      justify-content: space-around !important;
+    }
+  }
+
+  @media (max-width: 992px) {
   }
 `;
 
@@ -160,6 +214,10 @@ export const WhyTasty = styled.div`
 export const TestimonialSection = styled.div`
   padding: 60px 0;
 
+  @media (max-width: 480px) {
+    padding: 0px 0;
+  }
+
   .testimonial_subtitle {
     color: #df2020;
   }
@@ -168,8 +226,8 @@ export const TestimonialSection = styled.div`
     color: #df2020;
   }
 
-  .testimonial_desc{
-    line-height:30px;
-    color:#777;
+  .testimonial_desc {
+    line-height: 30px;
+    color: #777;
   }
 `;
