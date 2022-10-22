@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const ContainerHome = styled.div`
-  color: ${({ isActive }) => (isActive === "dsa" ? "" : "")};
   .hero__content {
     padding-top: 70px;
   }

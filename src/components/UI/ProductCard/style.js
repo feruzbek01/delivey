@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ProductContainer = styled.div`
   border: 1px solid #fde4e4;
-  height: 263px;
+  height: fit-content;
   text-align: center;
   padding: 20px 20px 30px 20px !important;
   cursor: pointer;
@@ -26,6 +26,10 @@ export const ProductContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    a {
+      color: #212245 ;
+    }
   }
 
   .product__price {
@@ -36,7 +40,7 @@ export const ProductContainer = styled.div`
 
   .addTOCart__btn {
     border: none;
-    padding: 7px 20px;
+    padding: 7px 15px;
     background: #df2020;
     color: #fff;
     border-radius: 5px;

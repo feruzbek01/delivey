@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col, ListGroup, ListGroupItem } from "reactstrap";
 import { ContainerFooter } from "./style";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/res-logo.png";
 
 export const Footer = () => {
@@ -10,7 +10,7 @@ export const Footer = () => {
       <Container>
         <Row>
           <Col lg="3" md="4" sm="6">
-            <div className=" footer__logo text-start">
+            <div className="footer__logo text-start">
               <img src={logo} alt="logo" />
               <h5>Tasty Treat</h5>
               <p>
@@ -39,7 +39,7 @@ export const Footer = () => {
             <h5 className="footer__title">Contact</h5>
             <ListGroup>
               <ListGroupItem className=" delivery__time-item border-0 ps-0">
-                <p>Location: ZindaBazar, Sylhet-3100, Bangladesh</p>
+                <p>Location: 12, 13-block, Yunusabad, Tashkent</p>
               </ListGroupItem>
 
               <ListGroupItem className="delivery__time-item border-0 ps-0">
@@ -67,7 +67,9 @@ export const Footer = () => {
         <Row className="mt-5">
           <Col
             // style={{border: '1px solid black'}}
-            lg="6" md="6">
+            lg="6"
+            md="6"
+          >
             <p className="copyright__text">
               Copyright - 2022, website made by Muhibur Rahman. All Rights
               Reserved.
@@ -76,8 +78,10 @@ export const Footer = () => {
 
           <Col
             // style={{border: '1px solid black'}}
-            lg="6" md="6">
-            <div  className="social__links d-flex align-items-center gap-4 justify-content-end">
+            lg="6"
+            md="6"
+          >
+            <div className="social__links d-flex align-items-center gap-4 justify-content-end">
               <p className="m-0">Follow: </p>
               <span>
                 {" "}

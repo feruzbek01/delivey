@@ -4,19 +4,17 @@ export const ContainerHeader = styled.div`
   width: 100%;
   height: 80px;
 
-  .header_shrink {
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index:9999;
-    box-shadow: 5px 5px 15px -5px #fde4e4;
-  }
-
   /* ====== media 768 */
-  @media (max-width:768px){
-    width:100%;
-    height:50px;
-    line-height:50px;  
+  @media (max-width: 768px) {
+    width: 100%;
+    height: fit-content;
+    line-height: 50px;
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
   }
 
   /*========= media 992====== */
@@ -38,10 +36,11 @@ export const ContainerHeader = styled.div`
       background: rgba(0, 0, 0, 0.425);
       z-index: 99;
 
-      display: none;
+       display: none;
     }
+
     .show_menu {
-      display: block;
+     display: block;
     }
 
     .menu {
@@ -92,13 +91,13 @@ export const Logo = styled.div`
     font-size: 1rem;
     color: #212245;
   }
-  `;
+`;
 
 export const Navigation = styled.div``;
 
 export const activeStyle = ({ isActive }) => {
   return {
-    color: isActive ? "blue" : "" , 
+    color: isActive ? "blue" : "",
   };
 };
 export const Menu = styled.div`
@@ -118,7 +117,6 @@ export const Menu = styled.div`
     /* transform: scale(1.04) */
   }
 `;
-
 
 export const NavRight = styled.div`
   display: flex;

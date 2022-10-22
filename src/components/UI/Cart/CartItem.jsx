@@ -1,7 +1,6 @@
 import React from "react";
-import productImg from "../../../assets/images/product_01.1.jpg";
 import { ListGroupItem } from "reactstrap";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { cartActions } from "../../../store/shoppingCart/cartSlice";
 
 export const CartItem = ({ item, index }) => {

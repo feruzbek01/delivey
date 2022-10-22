@@ -8,13 +8,14 @@ import {
   Navigation,
   NavRight,
   NavWrapper,
+  styleHeader,
 } from "./style";
 import { NavLink, Link } from "react-router-dom";
 import { Container } from "reactstrap";
 import logo from "../../assets/images/res-logo.png";
 import "./style.css";
 
-import {useDispatch, useSelector} from 'react-redux'
+import { useDispatch, useSelector } from "react-redux";
 import { toggle } from "../../store/shoppingCart/cartUiSlice";
 const nav__links = [
   {
@@ -35,14 +36,16 @@ const nav__links = [
   },
 ];
 
-
 export const Header = () => {
   const menuRef = useRef(null);
   const headerRef = useRef(null);
-  const toggleMenu = () => menuRef.current.classList.toggle("show_menu");
-  
-  const totalQuantity = useSelector(state => state.cart.totalQuantity)
-    
+
+  const toggleMenu = () => {
+    return menuRef.current.classList.toggle("show_menu");
+  };
+
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
+
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (
@@ -56,7 +59,6 @@ export const Header = () => {
     });
     // return ()=> window.removeEventListener('scroll')
   }, []);
-
 
   const dispatch = useDispatch();
   const toggleOpen = () => {
