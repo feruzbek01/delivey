@@ -9,8 +9,6 @@ export const CartContainer = styled.div`
   background: rgba(0, 0, 0, 0.639);
   z-index: 9999;
 
-    
-
   .cart {
     position: absolute;
     top: 0;
@@ -101,15 +99,32 @@ export const CartContainer = styled.div`
     background: #fde4e4;
     padding: 2px 3px;
     border-radius: 5px;
+    width: 130px;
   }
 
   .increase__btn,
   .decrease__btn {
     cursor: pointer;
+
+    :hover {
+      transform: scale(1.1);
+    }
+
+    :active {
+      transform: scale(0.9);
+    }
   }
 
   .delete__btn {
     font-size: 1.1.rem;
     font-weight: 600rem;
+    cursor: pointer;
+    :hover {
+      transform: scale(1.1);
+    }
+
+    :active {
+      transform: scale(0.9);
+    }
   }
 `;
