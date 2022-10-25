@@ -7,15 +7,18 @@ import { CartItem } from "./CartItem";
 import { CartContainer } from "./style";
 
 export const Carts = () => {
+
   const cartProducts = useSelector((state) => state.cart.cartItems);
   const totalAmount = useSelector((state) => state.cart.totalAmount);
 
   const dispatch = useDispatch();
+
   const toggleOpen = () => {
     dispatch(toggle());
   };
+
   return (
-    <CartContainer>
+    <CartContainer className="">
       <ListGroup className="cart">
         <div className="cart__close">
           <span onClick={toggleOpen}>

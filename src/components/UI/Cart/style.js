@@ -9,6 +9,8 @@ export const CartContainer = styled.div`
   background: rgba(0, 0, 0, 0.639);
   z-index: 9999;
 
+    
+
   .cart {
     position: absolute;
     top: 0;
@@ -30,7 +32,7 @@ export const CartContainer = styled.div`
       padding: 5px;
       color: #fff;
       border-radius: 50%;
-      cursor:pointer; 
+      cursor: pointer;
     }
   }
 
@@ -65,6 +67,12 @@ export const CartContainer = styled.div`
       background: #fff;
       color: #212245;
       font-weight: 600;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cart {
+      width: 100% !important;
     }
   }
 

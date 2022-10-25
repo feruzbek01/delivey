@@ -54,8 +54,9 @@ export const AllFoods = () => {
         <Container>
           <Row>
             <Col lg="6" md="6" sm="6">
-              <div className="search_widget d-flex align-items-center justify-content-between w-50 ">
+              <div className="search_widget d-flex align-items-center gap-3 justify-content-between  ">
                 <input
+                  className="w-100"
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   type="text"
@@ -66,9 +67,9 @@ export const AllFoods = () => {
                 </span>
               </div>
             </Col>
-            <Col lg="6" md="6" sm="6" className="mb-5">
-              <div className="sorting_widget text-end">
-                <select className="w-50">
+            <Col lg="6" md="6" sm="6" className="mb-2">
+              <div className="sorting_widget">
+                <select className="w-100">
                   <option>Default</option>
                   <option value="ascending">Alphabetically, A-Z</option>
                   <option value="descending">Alphabetically, Z-A</option>

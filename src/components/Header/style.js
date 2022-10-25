@@ -72,11 +72,19 @@ export const ContainerHeader = styled.div`
     .cart-icon i,
     .link i,
     .mobile_menu i {
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
 
     .mobile_menu {
       display: block !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .cart-icon i,
+    .link i,
+    .mobile_menu i {
+      font-size: 1.1rem;
     }
   }
 `;
@@ -151,6 +159,7 @@ export const NavRight = styled.div`
 
 export const CartIcon = styled.div`
   position: relative;
+  cursor: pointer;
   span {
     position: absolute;
     top: -3px;
@@ -168,5 +177,22 @@ export const CartIcon = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+
+  @media (max-width: 767px) {
+    span {
+      position: absolute;
+      top: 3px !important;
+      right: -10px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    span {
+      position: absolute;
+      top: -5px;
+      right: -10px;
+    }
   }
 `;

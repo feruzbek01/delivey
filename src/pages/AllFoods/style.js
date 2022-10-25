@@ -2,18 +2,28 @@ import styled from "styled-components";
 
 export const AllFoodContainer = styled.div`
   .search_widget,
-  .sorting_widget select {
-    padding: 7px 15px;
+  .sorting_widget {
+    height: 44px;
+    padding: 10px 15px;
     border: 1px solid black;
     border-radius: 5px;
     cursor: pointer;
+    border: 1px solid black;
   }
 
-  .search_widget input {
+  .search_widget input,
+  .sorting_widget select {
     border: none;
     outline: none;
+    font-size: 17px;
   }
 
+
+  section{
+    padding: 35px 0;
+  }
+
+  
   .paginationBttns {
     width: 80px;
     height: 40px;
@@ -37,44 +47,11 @@ export const AllFoodContainer = styled.div`
     }
   }
 
-  .search_widget input {
-    width: 50% !important ;
-    font-size: 0.8rem;
-  }
-  .sorting_widget select {
-    width: 50% !important;
-    font-size: 0.8rem;
-  }
-
   
-
-  @media only screen and (max-width: 768px) {
-    .search_widget {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-    .search_widget {
-      width: 100% !important ;
-      font-size: 0.8rem;
-    }
-    .sorting_widget select {
-      width: 100% !important;
-      font-size: 0.8rem;
+  @media (max-width: 575px){
+    .search_widget{
+      margin-bottom: 15px;
     }
   }
 
-  @media only screen and (min-width: 768px) {
-    .search_widget {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-    .search_widget {
-      width: 100% !important ;
-      font-size: 0.8rem;
-    }
-    .sorting_widget select {
-      width: 100% !important;
-      font-size: 0.8rem;
-    }
-  }
 `;
