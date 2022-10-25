@@ -1,4 +1,4 @@
-import React,{useRef} from "react";
+import React from "react";
 import { Container } from "./style";
 import { Routers } from "../../routes/Routers";
 import { Footer } from "../Footer";
